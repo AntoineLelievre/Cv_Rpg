@@ -1,0 +1,174 @@
+/* generals divs */
+html, body{
+    background: url('../src/fond.jpg') no-repeat fixed;
+    background-size: cover;
+    font-family: 'Ralewat', sans-serif;
+    margin: 0; padding: 0;
+    overflow: hidden;
+    width: 100%;height: 100%;}
+main{
+    background-color: #273135c5;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 1px solid;                                                      
+    position: absolute;
+    top:10%;left : 33%;
+    overflow: hidden;
+    width: 480px; height: 680px;}
+section{
+    color: rgb(255, 241, 179);
+    display:flex;
+    margin: 1%;}
+article{
+    position: relative;}
+
+/* contener bar */   
+#bar{
+    background-color: #273135;
+    border: 1px solid black;
+    border-bottom: 0;    
+    border-radius: 10px 10px 0 0; 
+    color: rgb(255, 241, 179);  
+    cursor : pointer;  
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top:10%;left : 33%;
+    user-select : none;
+    width: 460px;
+    z-index:10;}
+
+/* header */
+#name {
+    background : linear-gradient(to bottom, rgba(39,49,53,1) 0%,rgba(39,49,53,1) 59%,rgba(39,49,53,0.98) 60%,rgba(229,229,229,0) 100%);
+    margin : 0 0 -22% -5%;
+    padding: 0 5%;
+    width: 110%; height: 32%;}
+#name div{
+    background-color:#0d1113c7;
+    box-shadow: 0px 3px 10px 2px #000000 inset;
+    margin:35px 5px -20px 10px ;padding-top:20px;
+    text-align: center;
+    width: 42%; height: 16%;}
+
+/* menu */
+section:nth-child(2){
+    position: relative;
+}
+section:nth-child(2) div{
+    border: 0.05em solid black;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    cursor : pointer;  
+    font-size: 0.9em;
+    height: 20px;
+    margin: -4% 0 0 5%;
+    padding: 5px;
+    position: absolute;
+}
+section:nth-child(2) div:first-child{
+    background-color: #273135;
+    z-index: 100;
+}
+section:nth-child(2) div:nth-child(3){
+    left:200px;
+    z-index: 3;
+    background: #273135;
+    box-shadow: inset -2px 50px 39px -31px #171c1f;
+}
+section:nth-child(2) div:nth-child(4){
+    left:310px;
+    z-index: 3;
+    background: #273135;
+    box-shadow: inset -2px 50px 39px -31px #171c1f;
+}
+section:nth-child(2) div:nth-child(2){
+    left:100px;
+    z-index: 3;
+    background: #273135;
+    box-shadow: inset -2px 50px 39px -31px #171c1f;
+}
+section:nth-child(2) div:hover{
+    background: #273135;
+    box-shadow: 0px 0px 10px 0px #000000 inset;
+}
+/* fiche du personnage avec le stuff*/
+section:nth-child(3){
+    border-top: 0.1em black solid;
+    border-radius: 10px;
+    width:100%;height: 100%;
+    position: absolute;
+    z-index: 5;}
+#personnage{
+    display: flex;
+    width: 100%;height: 85%;}
+.stuff{
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, #273135c5 100%);
+    border-radius: 15px;
+    margin:0% 2% 2% 0%;
+    position: absolute;
+    width: 130px; height: 94%;}
+/* emplacement de stuff */
+.stuff div{
+    background-size: cover;
+    box-shadow: 0px 0px 10px 0px #000000 inset;
+    border-radius: 10px;
+    margin : 20% 25px;
+    width: 80px; height: 80px;
+}
+.stuff div:first-child{
+    margin-top: 12.5%;
+}
+.stuff div:first-child{
+    background: url("../src/head.svg");
+}
+.stuff div:nth-child(2){
+    background: url("../src/armor.svg");
+}
+.stuff div:nth-child(3){
+    background: url("../src/belt.svg");
+}
+.stuff div:nth-child(4){
+    background: url("../src/hand.svg");
+}
+.stuff div:nth-child(5){
+    background: url("../src/boots.svg");
+}
+
+/* profil pic */
+#me{
+    background: url("../src/perso.gif") no-repeat ;
+    background-size: 200%; 
+    background-position-x: 50%;
+    background-position-y: 80%;  
+    border : none;
+    position: absolute;
+    left: 28%;
+    width: 40%; height: 85%;
+}
+.stuff:nth-child(3){
+    right: 0%;
+}
+
+/* stats */
+#stats{
+    width: 50%;
+}
+
+#stats div{
+    background-color: rgba(0, 128, 0, 0.781);
+    height: 38%;
+    margin:2%;
+}
+.salut{
+    display: none;
+}
+
+
+#casque{
+    background: url("../src/headphones.png");
+    background-size: cover;
+    position: absolute;
+    top:0%; left: 0%;
+    width: 80px; height: 80px;
+}
