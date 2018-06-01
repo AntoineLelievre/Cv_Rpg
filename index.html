@@ -11,7 +11,8 @@
 </head>
 
 <body>
-
+    <div id="casque"></div>
+    <div>
     <div id="bar">Personnage</div>
     <main>
         <section id="name">
@@ -19,13 +20,13 @@
             <div>Developpeur</div>
         </section>
         <section>
-            <div>Equipement</div>
+            <div class="select">Equipement</div>
             <div>Statistiques</div>
             <div>Compétences</div>
             <div>Achievement</div>
         </section>
         <section>
-            <article id="personnage">
+            <article id="personnage" >
                 <div class="stuff">
                     <div></div>
                     <div></div>
@@ -44,6 +45,7 @@
                     <div></div>
                 </div>
             </article>
+            
             <article class="salut">
                 <div>Statistiques</div>
                 <div>Statistiques</div>
@@ -58,10 +60,33 @@
             </article>
         </section>
     </main>
+
+
+    
+    <div id="bar2">Inventaire</div>
+    <footer>
+        <div></div>
+        <section>
+
+        </section>
+        <div></div>
+    </footer>
     <script>
         var menu = document.querySelectorAll("section:nth-child(2) div");
         var pages = document.querySelectorAll("section:nth-child(3) article");
-
+        var navig = document.querySelectorAll("section:nth-child(2) div");
+        
+        // Menu 
+        for (let i=0; i<4 ; i++){
+            menu[i].onclick = function () {
+                for (let i=0; i<4 ; i++){
+                    pages[i].classList.add('salut');
+                    menu[i].classList.remove('select');
+                }
+                menu[i].classList.add('select');
+                pages[i].classList.remove('salut');
+            }
+        }
     </script>
     <script src="js/dragNdrop.js"></script>
 </body>
