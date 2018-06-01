@@ -190,10 +190,3 @@ footer section{
     position: absolute;
     width: 98%; height: 80%;
 }
-#casque{
-    background: url("../src/headphones.png");
-    background-size: cover;
-    position: absolute;
-    top:0%; left: 0%;
-    width: 80px; height: 80px;
-}
