@@ -22,7 +22,7 @@
             <div class="select">Equipement</div>
             <div>Statistiques</div>
             <div>Compétences</div>
-            <div>Achievement</div>
+            <div>Hauts Faits</div>
         </section>
         <section>
             <article id="personnage" >
@@ -53,40 +53,59 @@
                 <div>Compétences</div>
                 <div>Compétences</div>
             </article>
-            <article class="salut">
-                <div>Achievement</div>
-                <div>Achievement</div>
+            <article id ="fait"class="salut">
+                <nav>
+                    <select>
+                        <option>Tous</option>
+                        <option>Site web</option>
+                        <option>Application</option>
+                    </select>
+                    <ul>
+                        <li><a href="#">&#9668;</a></li>
+                        <li><a href="#" class="color">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">&#9658;</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <div class="project">
+                        <a target="_blank" href=" https://antoinelelievre.github.io/Mrcuisto/Accueil.html">
+                            <p>Mr Cuisto</p>
+                            <div>
+                                <img src="src/icons/chef-toque.svg">
+                                <p>Donec ultrices venenatis facilisis. Proin sit amet facilisis neque. </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a target="_blank" href="https://antoinelelievre.github.io/Systeme-solaire/">
+                            <p>Système solaire</p>
+                            <div>
+                                <img src="src/icons/mars.gif">
+                                <p>Donec ultrices venenatis facilisis. Proin sit amet facilisis neque. </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project"><p>Site web fictif</p></div>
+                    <div class="project"><p>Application fictive</p></div>
+                </section>
             </article>
         </section>
     </main>
 
 
-    
     <div id="bar2">Inventaire</div>
     <footer>
         <div></div>
         <section>
-
         </section>
         <div></div>
     </footer>
-    <script>
-        var menu = document.querySelectorAll("section:nth-child(2) div");
-        var pages = document.querySelectorAll("section:nth-child(3) article");
-        var navig = document.querySelectorAll("section:nth-child(2) div");
-        
-        // Menu 
-        for (let i=0; i<4 ; i++){
-            menu[i].onclick = function () {
-                for (let i=0; i<4 ; i++){
-                    pages[i].classList.add('salut');
-                    menu[i].classList.remove('select');
-                }
-                menu[i].classList.add('select');
-                pages[i].classList.remove('salut');
-            }
-        }
-    </script>
+
+
+
+    <script src ="js/main.js"></script>
     <script src="js/dragNdrop.js"></script>
 </body>
 </html>
