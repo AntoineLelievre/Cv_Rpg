@@ -85,3 +85,44 @@ bar2.onmousedown = function (event) {
 bar2.ondragstart = function () {
     return false;
 };
+
+//////////drop objet
+class App {
+    // Static permet de définir une méthode de la classe App ( Méthode = propriété d'une classe, ex : .innerHTML ou .querySelector)
+    
+    static init() {
+        // Création et définition des propriétés de l'image que l'on bouge 
+        App.image = document.querySelectorAll('.image')[0];
+        App.image.addEventListener("dragstart", App.dragstart);
+        App.image.addEventListener("dragend", App.dragend);
+
+        // Ensemble des boites dans lesquelles ont peut déposer l'image
+        const containers = document.querySelectorAll('.boite');
+
+        // On applique des propriétés sur chaque boites
+        for (let container of containers) {
+            container.addEventListener("dragover", App.dragover);
+            container.addEventListener("drop", App.drop);
+        }
+    }
+    
+    // Se déclenche quand on commence le drag
+    static dragstart() {
+        this.style.opacity = "0";
+    }
+    // Se déclenche quand a la fin de notre drag
+    static dragend() {
+        this.style.opacity = "1";
+
+    }
+    // ??? Empeche probablement l'image de retourner dans sa div initiale 
+    static dragover(e) {
+        e.preventDefault();
+    }
+    // Se déclenche quand on drop notre image
+    static drop() {
+        this.append(App.image);
+    }
+}
+document.addEventListener("DOMContentLoaded", App.init)// lance la fonction initial de la classe App au chargement du DOM
+

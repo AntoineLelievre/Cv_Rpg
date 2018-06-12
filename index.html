@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    <div>
     <div id="bar">Personnage</div>
     <main>
         <section id="name">
@@ -27,7 +26,7 @@
         <section>
             <article id="personnage" >
                 <div class="stuff">
-                    <div></div>
+                    <div class="boite"></div>
                     <div></div>
                     <div></div>
                     <div></div>
@@ -44,21 +43,57 @@
                     <div></div>
                 </div>
             </article>
-            
             <article class="salut">
                 <div>Statistiques</div>
                 <div>Statistiques</div>
             </article>
-            <article class="salut">
-                <div>Compétences</div>
-                <div>Compétences</div>
+            <article class="salut" id="skills">
+                <label>
+                    <input type="checkbox"  />
+                    <!-- mettre un lien avec # pour desactiver le clic-->
+                    <div class="card">
+                        <div class="front scrollingbar">
+                            
+                            <div class="project"> Compé 1</div>
+                            <div class="project"> Compé 2</div>
+                            <div class="project"> Compé 3</div>
+                            <div class="project"> Compé 4</div>
+                            <div class="project"> Compé 5</div>
+                        </div>
+                        
+                        <div class="back">
+                            <section>
+                                <div class="compet"><p>0/5</p></div>
+                                <div class="compet"><p>0/5</p></div>
+                                <div class="compet"><p>3/5</p></div>
+                            </section>
+                            <section>
+                                <div class="compet"><p>1/5</p></div>
+                                <div class="compet"><p>1/5</p></div>
+                            </section>
+                            <section>
+                                <div class="compet"><p>3/5</p></div>
+                                <div class="compet"><p>0/5</p></div>
+                            </section>
+                            <section>
+                                <div class="compet"><p>5/5</p></div>
+                                <div class="compet"><p>5/5</p></div>
+                                <div class="compet"><p>1/5</p></div>
+                                <div class="compet"><p>1/5</p></div>
+                            </section>
+                            <section>
+                            </section>
+                        </div>
+                    </div>
+                </label>
             </article>
-            <article id ="fait"class="salut">
+            <article id ="fait" class="salut">
                 <nav>
                     <select>
                         <option>Tous</option>
                         <option>Site web</option>
                         <option>Application</option>
+                        <option>Autre</option>
                     </select>
                     <ul>
                         <li><a href="#">&#9668;</a></li>
@@ -69,43 +104,19 @@
                     </ul>
                 </nav>
                 <section>
-                    <div class="project">
-                        <a target="_blank" href=" https://antoinelelievre.github.io/Mrcuisto/Accueil.html">
-                            <p>Mr Cuisto</p>
-                            <div>
-                                <img src="src/icons/chef-toque.svg">
-                                <p>Donec ultrices venenatis facilisis. Proin sit amet facilisis neque. </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project">
-                        <a target="_blank" href="https://antoinelelievre.github.io/Systeme-solaire/">
-                            <p>Système solaire</p>
-                            <div>
-                                <img src="src/icons/mars.gif">
-                                <p>Donec ultrices venenatis facilisis. Proin sit amet facilisis neque. </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="project"><p>Site web fictif</p></div>
-                    <div class="project"><p>Application fictive</p></div>
                 </section>
             </article>
         </section>
     </main>
-
-
     <div id="bar2">Inventaire</div>
     <footer>
-        <div></div>
         <section>
+            <div class="boite"><img src="src/headphones.png" class="image"></div>
         </section>
-        <div></div>
     </footer>
-
-
-
+    <script src ="js/oXHR.js" ></script>
+    <script src ="js/portofolio.js" ></script>
     <script src ="js/main.js"></script>
-    <script src="js/dragNdrop.js"></script>
+    <script src ="js/dragNdrop.js"></script>
 </body>
 </html>
