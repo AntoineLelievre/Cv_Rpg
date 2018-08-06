@@ -3,7 +3,9 @@ var pages = document.querySelectorAll("section:nth-child(3) article");
 var navig = document.querySelectorAll("section:nth-child(2) div");
 var ligne =  document.querySelectorAll("#skills section");
 var inventaire = document.querySelector("footer section");
-
+$(".compet").onclick = function(){
+    console.log("coucou")
+}
 function init(){
     // Menu 
     for (let i=0; i<4 ; i++){
@@ -29,17 +31,11 @@ function init(){
             document.querySelector("#skills section:nth-child(5)").insertAdjacentHTML("beforeend",`
             <div class='descri salut'> Description ${icon+1} </div>`);
             element[j].onmouseover = function(){
-                console.log(icon);
                 document.querySelector(".descri:nth-child("+icon+")").classList.remove ( "salut");
             }
             element[j].onmouseleave = function(){
-                console.log(icon);
                 document.querySelector(".descri:nth-child("+icon+")").classList.add ("salut");
             }
-            /*if(element[j].innerText.substr(0,1)== 0){
-                element[j].style.filter = ' grayscale(100%)';
-                element[j].style.boxShadow = " 0px 0px 50px 10px #000000 inset";
-            }*/
             icon++
         }
     }
@@ -48,10 +44,27 @@ function init(){
     }
 }
 
-document.querySelector(".card").onclick = function barscroll(){
+document.querySelector(".card").onclick = function (){
     setTimeout(
-        document.querySelector(".front").classList.toggle("scrollingbar"),2000
+        function(){
+            document.querySelector(".front").classList.toggle("salut");
+            document.querySelector(".back").classList.toggle("salut");},200
     )
     
 }
 init()
+
+/* var macap = document.querySelectorAll(".front .compet");
+console.log(macap)
+for (let i=0; i<macap.lenght; i++){
+    console.log("coucou")
+    macap[i].onclick = function(){
+        console.log(this)
+        this.style.height ="800px"
+
+    }
+} */
+/*
+$(".front .compet").click( function (){
+    this.css("width","60px;")
+});*/

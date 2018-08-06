@@ -1,8 +1,9 @@
 /* generals divs */
 html, body{
-    background: url('../src/fond.jpg') no-repeat fixed;
+    background: url('../src/fond.png') no-repeat fixed;
     background-size: cover;
     font-family: 'Ralewat', sans-serif;
+    font-size: 0.96em;
     margin: 0; padding: 0;
     overflow: hidden;
     width: 100%;height: 100%;}
@@ -12,7 +13,7 @@ main, footer{
     border-radius: 10px;
     border: 1px solid;                                                      
     position: absolute;
-    overflow: hidden;}
+    }
 main {
     width: 480px; height: 660px;
     top:10%;left : 33%;
@@ -31,7 +32,9 @@ main {
     user-select : none;
     z-index:10;}
 article{
+    padding-top : 10px;
     position: relative;
+    width: 99%;
 }
 a{
     color: rgb(255, 241, 179);
@@ -52,15 +55,12 @@ ul{
     position: relative;
     width: 80px; height: 80px;
 }
-    /*  --------------------- Profil window ------------------------*/
+/*  --------------------- Profil window ------------------------*/
 
 main>section{
     color: rgb(255, 241, 179);
     display:flex;
     margin: 1%;}
-
-
-/* contener name */   
 #bar{
     top:10%;left : 33%;
     width: 460px;
@@ -68,15 +68,14 @@ main>section{
 /* header */
 #name {
     background : linear-gradient(to bottom, rgba(39,49,53,1) 0%,rgba(39,49,53,1) 59%,rgba(39,49,53,0.98) 60%,rgba(229,229,229,0) 100%);
-    margin : 0 0 -22% -5%;
-    padding: 0 5%;
-    width: 110%; height: 31%;}
+    margin : 0 0 -22%;
+    width: 100%; height: 31%;}
 #name div{
     background-color:#0d1113c7;
     box-shadow: 0px 3px 10px 2px #000000 inset;
-    margin:35px 5px -20px 10px ;padding-top:13px;
+    margin:35px 3% -20px 3% ;padding-top:13px;
     text-align: center;
-    width: 42%; height: 14%;}
+    width: 50%; height: 14%;}
 
 /* menu */
 main>section:nth-child(2){
@@ -89,10 +88,11 @@ main>section:nth-child(2) div{
     box-shadow: inset -2px 50px 39px -31px #171c1f;
     cursor : pointer;  
     font-size: 0.9em;
-    height: 19px;
     margin: -4% 0 0 5%;
     padding: 5px 10px;
     position: absolute;
+    text-align: center;
+    width: 85px; height: 19px;
     z-index: 3;
 }
 main .select{
@@ -105,13 +105,13 @@ main>section:nth-child(2) div:first-child{
     left:-4%;
 }
 main>section:nth-child(2) div:nth-child(2){
-    left:18%;
+    left:19%;
 }
 main>section:nth-child(2) div:nth-child(3){
-    left:39%;
+    left:42.2%;
 }
 main>section:nth-child(2) div:nth-child(4){
-    left:63%;
+    left:65.4%;
 }
 main>section:nth-child(2) div:hover{
     box-shadow: none;
@@ -120,17 +120,16 @@ main>section:nth-child(2) div:hover{
 .salut{/* menus en retrait */
     display: none!important; 
 }
-
-/* fiche du personnage avec le stuff*/
 main>section:nth-child(3){
     border-top: 0.1em black solid;
     border-radius: 10px;
     width:98%;height: 100%;
     position: absolute;
     z-index: 5;}
+/* ----------------------------------- Equipement ----------------------------------------*/
+
 #personnage{
-    display: flex;
-    width: 100%;height: 85%;}
+    height: 85%;}
 .stuff{
     background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, #273135c5 100%);
     border-radius: 15px;
@@ -178,37 +177,156 @@ main>section:nth-child(3){
 .stuff:nth-child(3){
     right: 0%;
 }
-/* ------------------ Compétences --------------------- */
-#skills{
+/* ------------------ stats  --------------------- */
+#stats div{
     background-color: #1e2629cb;  
     border-radius: 10px;
-    box-shadow: 0px 0px 15px 0px #000000 inset;  
+    box-shadow: 0px 0px 15px 0px #000000 inset; 
+    display: block; 
     margin: 2%;
     overflow: hidden;
-    width: 100%; height: 78%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 97%; height: 78%;
 }
-#skills section {
-    display: flex;
-}
-.front div{
-    background-color:#0d1113ab;
-    border-top : 2em solid;
-    border-image: linear-gradient(to left, #0d111300 20%, rgba(0,0,0,1), #0d111300 80%)30;
+/* ------------------ skills --------------------- */
+label {
+    background-color: #1e2629cb;  
     border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px #000000 inset; 
+    display: block; 
+    margin: 2%;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 97%; height: 78%;
+}
+/* liste skills */
+h3{
+   margin-bottom: 30px;
+   text-align: center;
+}
+.front .compet{ 
+    background-color:#161d20;
+    border: 0.1em black solid;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    display:flex;
+    flex-wrap: wrap;
     height: 76px;
-    margin: 2% 5%;
+    margin: -2% 5%;
+    transition:  0.4s;
+}
+.front .compet:first-child{
+    margin-top: 4.7%;
+}
+.front .compet:hover{
+    background-color:#1d272b;
+    border-color: rgba(253, 234, 148, 0.247);
+    box-shadow: 0px 0px 50px 10px #161d20 inset;
+    height:86px ;
+    margin-top: -19px;
+    transition:  0.4s;
+}
+.front .compet:first-child:hover{
+    margin-top: initial;
+}
+.front .ico{
+    border: 0.1em black solid;
+    box-shadow: 0px 0px 10px 0px #000000 inset;
+    margin:1.5% 2% 2% 2%;
+    width: 45px ; height:45px ;
+}
+.front .ico + div{
+    width: 77%;
+}
+.front h5{
+    margin-top:5px;
+}
+.front h5 + p{
+    margin-top:-15px;
 }
 
 
+.meter { 
+    background: #555;
+    border-radius: 8px 20px ;
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+    margin-top: -8px;
+    padding: 2px;
+	position: relative;
+    width:75%;height: 5px;
+    opacity: 1;
 
-.compet{
+}
+.meter > span {
+    transition: 0.2s linear;
+    display: block;
+    height: 100%;
+    border-radius: 0px 20px ;
+    background-color: rgb(218, 69, 58);
+    box-shadow: inset 0 2px 9px  rgba(255, 255, 255, 0.027),inset 0 -2px 6px rgba(0, 0, 0, 0.267);
+    overflow: hidden;
+  }
+.compet:nth-child(2) .meter > span{
+    animation: progress1 1s ease-out;
+    width: 90%;
+}
+.compet:nth-child(3) .meter > span{
+    animation: progress2 1s ease-out;
+    width: 85%;
+}
+.compet:nth-child(4) .meter > span{
+    animation: progress3 1s ease-out;
+    width: 80%;
+}
+.compet:nth-child(5) .meter > span{
+    animation: progress4 1s ease-out;
+    width: 20%;
+}
+.compet:nth-child(6) .meter > span{
+    animation: progress5 1s ease-out;
+    width: 60%;
+}
+.compet:nth-child(7) .meter > span{
+    animation: progress6 1s ease-out;
+    width: 60%;
+}
+.compet:nth-child(8) .meter > span{
+    animation: progress7 1s ease-out;
+    width: 3%;
+}
+.compet:nth-child(9) .meter > span{
+    animation: progress8 1s ease-out;
+    width: 3%;
+}
+.compet:nth-child(10) .meter > span{
+    animation: progress9 1s ease-out;
+    width: 3%;
+}
+@keyframes progress1 { 0% { width:0px;} 100%{ width:90%;}  }
+@keyframes progress2 { 0% { width:0px;} 100%{ width:85%;}  }
+@keyframes progress3 { 0% { width:0px;} 100%{ width:80%;}  }
+@keyframes progress4 { 0% { width:0px;} 100%{ width:20%;}  }
+@keyframes progress5 { 0% { width:0px;} 100%{ width:60%;}  }
+@keyframes progress6 { 0% { width:0px;} 100%{ width:60%;}  }
+@keyframes progress7 { 0% { width:0px;} 100%{ width:3%;}  }
+@keyframes progress8 { 0% { width:0px;} 100%{ width:3%;}  }
+@keyframes progress9 { 0% { width:0px;} 100%{ width:3%;}  }
+
+/*tree skills */
+.back section{
+    display:flex;
+    flex-direction: row;
+}
+.back .compet{
     border: 0.1em black solid;
     box-shadow: 0px 0px 10px 0px #000000 inset;
     margin:25px auto;
     width: 70px; height:70px ;
 }
 
-#skills p{
+.back p{
     margin:85%;
 }
 .descri{
@@ -218,14 +336,6 @@ main>section:nth-child(3){
     z-index : 20;
 }
 
-label {
-    cursor: pointer;
-    display: block;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    top:50%;left:50%;
-    width: 100%;height: 100%;
-}
 .card {  
     border-radius: 10px;
     position: relative;
@@ -236,17 +346,18 @@ label {
 }
 .card>div {
     position: absolute;
-    text-align: center;
+   
     width: 100%;height: 100%;
-    backface-visibility: hidden;
     border-radius: 2px;
     
 }
 .scrollingbar{
     overflow-y: auto;
+    
 }
+
 input {
-    display: none;
+    display: block;
 }
 
 :checked+.card, .card .back  {
@@ -254,11 +365,6 @@ input {
 }
 
 /* ------------------ Hauts faits --------------------- */
-#fait{
-    overflow: hidden;
-    padding-top : 20px;
-    width: 99%;
-}
 /* sous menu des hauts faits */
 #fait nav, #fait ul{
     display: flex;
@@ -296,7 +402,6 @@ input {
     background-color: #1e2629;                          /*  Probablement */
     box-shadow: 0px 0px 15px 0px #000000 inset;         /*  à modifier   */
     border-radius: 10px;
-    overflow: hidden;
     height: 74%;
     margin: 2%;padding: 1%;    
 }
@@ -360,4 +465,24 @@ footer .boite{
     margin: 0.5%;
 }
 
+/* ----------------Scroll Bar ---------------- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0d11134d; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(42, 53, 58, 0.274); 
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 0px #000000 inset;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.699); 
+    box-shadow: 0px 0px 15px 0px #000000 inset;
+}
 

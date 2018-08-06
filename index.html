@@ -7,10 +7,11 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
 <body>
+    <!-- interface of the profile window -->
     <div id="bar">Personnage</div>
     <main>
         <section id="name">
@@ -24,6 +25,7 @@
             <div>Hauts Faits</div>
         </section>
         <section>
+            <!--  Character and stuff window  -->
             <article id="personnage" >
                 <div class="stuff">
                     <div class="boite"></div>
@@ -33,7 +35,6 @@
                     <div></div>
                 </div>
                 <div id="me">
-                    <!--  personnage  -->
                 </div>
                 <div class="stuff">
                     <div></div>
@@ -43,25 +44,95 @@
                     <div></div>
                 </div>
             </article>
-            <article class="salut">
-                <div>Statistiques</div>
-                <div>Statistiques</div>
+            <!--  Stats window  -->
+            <article class="salut" id="stats">
+                <div>
+                    <h3>~Statistiques~</h3>
+                </div>
             </article>
+            <!-- Skills window-->
             <article class="salut" id="skills">
                 <label>
                     <input type="checkbox"  />
                     <!-- mettre un lien avec # pour desactiver le clic-->
                     <div class="card">
                         <div class="front scrollingbar">
-                            
-                            <div class="project"> Compé 1</div>
-                            <div class="project"> Compé 2</div>
-                            <div class="project"> Compé 3</div>
-                            <div class="project"> Compé 4</div>
-                            <div class="project"> Compé 5</div>
+                            <h3>~ Front End ~</h3>
+                            <div class="compet"> 
+                                <div class="ico"></div>
+                                <div>
+                                    <h5>Html5 </h5>
+                                    <p>bla bla descri</p>
+                                    <div class="meter"><span></span></div>   
+                                </div>                             
+                            </div>
+                            <div class="compet"> 
+                                <div class="ico"></div>
+                                <div>
+                                    <h5>Css3 </h5>
+                                    <p>bla bla descri</p>
+                                    <div class="meter"><span></span></div>   
+                                </div>                             
+                            </div>
+                            <div class="compet"> 
+                                <div class="ico"></div>
+                                <div>
+                                    <h5>Javascript </h5>
+                                    <p>bla bla descri</p>
+                                    <div class="meter"><span></span></div>   
+                                </div>                             
+                            </div>
+                            <div class="compet"> 
+                                <div class="ico"></div>
+                                <div>
+                                    <h5>Jquery </h5>
+                                    <p>bla bla descri</p>
+                                    <div class="meter"><span></span></div>   
+                                </div>                             
+                            </div>
+                            <div class="compet"> 
+                                <div class="ico"></div>
+                                <div>
+                                    <h5>Ajax </h5>
+                                    <p>bla bla descri</p>
+                                    <div class="meter"><span></span></div>   
+                                </div>                             
+                            </div>
+                            <div class="compet"> 
+                                <div class="ico"></div>
+                                <div>
+                                    <h5>Json </h5>
+                                    <p>bla bla descri</p>
+                                    <div class="meter"><span></span></div>   
+                                </div>                             
+                            </div>
+                            <div class="compet"> 
+                                <div class="ico"></div>
+                                <div>
+                                    <h5>Angular </h5>
+                                    <p>bla bla descri</p>
+                                    <div class="meter"><span></span></div>   
+                                </div>                             
+                            </div>
+                            <div class="compet"> 
+                                <div class="ico"></div>
+                                <div>
+                                    <h5>NativScript </h5>
+                                    <p>bla bla descri</p>
+                                    <div class="meter"><span></span></div>   
+                                </div>                             
+                            </div>
+                            <h3> ~ Back End ~</h3>
+                            <div class="compet"> PHP</div>
+                            <div class="compet"> Node Js</div>
+                            <div class="compet"> Symfony</div>
+                            <div class="compet"> Python</div>
+                            <h3> ~ Bases de données ~</h3>
+                            <div class="compet"> MySql</div>
+                            <div class="compet"> MongoDB</div> 
                         </div>
                         
-                        <div class="back">
+                        <div class="back salut">
                             <section>
                                 <div class="compet"><p>0/5</p></div>
                                 <div class="compet"><p>0/5</p></div>
@@ -111,9 +182,10 @@
     <div id="bar2">Inventaire</div>
     <footer>
         <section>
-            <div class="boite"><img src="src/headphones.png" class="image"></div>
+            <div class="boite"><img src="src/headphones.svg" class="image"></div>
         </section>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src ="js/oXHR.js" ></script>
     <script src ="js/portofolio.js" ></script>
     <script src ="js/main.js"></script>
