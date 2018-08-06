@@ -357,7 +357,7 @@ h3{
 }
 
 input {
-    display: block;
+    display: none;
 }
 
 :checked+.card, .card .back  {
